@@ -21,6 +21,11 @@ struct ContentView: View {
             //現在地の追従(追従許可=.follow,追従許可しない=.none)
             userTrackingMode:  .constant(MapUserTrackingMode.follow)
         )
+        .task(){
+            //位置情報へのアクセスを要求
+            let manager = CLLocationManager()
+            manager.requestWhenInUseAuthorization()
+        }
     }
 }
 
