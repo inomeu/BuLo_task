@@ -11,6 +11,9 @@
 		82B50B29298B895F003D5F13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B50B28298B895F003D5F13 /* ContentView.swift */; };
 		82B50B2B298B8961003D5F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B50B2A298B8961003D5F13 /* Assets.xcassets */; };
 		82B50B2E298B8961003D5F13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B50B2D298B8961003D5F13 /* Preview Assets.xcassets */; };
+		82B50B37298BABA6003D5F13 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B50B36298BABA6003D5F13 /* PointView.swift */; };
+		82B50B39298E1EB8003D5F13 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B50B38298E1EB8003D5F13 /* DataModel.swift */; };
+		82EBF016298E3B9700156E30 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBF015298E3B9700156E30 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,10 @@
 		82B50B28298B895F003D5F13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		82B50B2A298B8961003D5F13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82B50B2D298B8961003D5F13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		82B50B36298BABA6003D5F13 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
+		82B50B38298E1EB8003D5F13 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		82EBF014298E329500156E30 /* BuLo-task-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BuLo-task-Info.plist"; sourceTree = SOURCE_ROOT; };
+		82EBF015298E3B9700156E30 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +58,12 @@
 		82B50B25298B895F003D5F13 /* BuLo_task */ = {
 			isa = PBXGroup;
 			children = (
+				82EBF014298E329500156E30 /* BuLo-task-Info.plist */,
 				82B50B26298B895F003D5F13 /* BuLo_taskApp.swift */,
 				82B50B28298B895F003D5F13 /* ContentView.swift */,
+				82EBF015298E3B9700156E30 /* MapView.swift */,
+				82B50B36298BABA6003D5F13 /* PointView.swift */,
+				82B50B38298E1EB8003D5F13 /* DataModel.swift */,
 				82B50B2A298B8961003D5F13 /* Assets.xcassets */,
 				82B50B2C298B8961003D5F13 /* Preview Content */,
 			);
@@ -137,6 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82B50B37298BABA6003D5F13 /* PointView.swift in Sources */,
+				82B50B39298E1EB8003D5F13 /* DataModel.swift in Sources */,
+				82EBF016298E3B9700156E30 /* MapView.swift in Sources */,
 				82B50B29298B895F003D5F13 /* ContentView.swift in Sources */,
 				82B50B27298B895F003D5F13 /* BuLo_taskApp.swift in Sources */,
 			);
@@ -267,9 +281,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BuLo_task/Preview Content\"";
+				DEVELOPMENT_TEAM = 6B3R3BZGRX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "BuLo-task-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報は、地図上での位置の表示に使用されます。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -295,9 +312,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BuLo_task/Preview Content\"";
+				DEVELOPMENT_TEAM = 6B3R3BZGRX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "BuLo-task-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報は、地図上での位置の表示に使用されます。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
