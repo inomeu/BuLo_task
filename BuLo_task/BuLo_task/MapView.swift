@@ -9,30 +9,36 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.789656, longitude: 140.751924) ,
-                                                   latitudinalMeters: 900,
-                                                   longitudinalMeters: 900 )
+    var coordinate: CLLocationCoordinate2D?
+    var latitude: Double
+    var longitude: Double
     
-    let place : IdentifiablePlace
+    @State var userTrackingMode:  MapUserTrackingMode = .none
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.789656, longitude: 140.751924),
+                                                   latitudinalMeters: 900,longitudinalMeters: 900)
     
     var body: some View {
         Map(coordinateRegion: $region,
-            annotationItems: [place])
-        { place in
-            //            MapMarker(coordinate: place.location, tint: Color.blue)
-            MapAnnotation(coordinate: place.location) {
-                Image(systemName: "tortoise.fill")
-                    .foregroundColor(Color(UIColor.systemBackground))
-                    .padding()
-                    .background(Color.orange.cornerRadius(10))
+            interactionModes: .all,
+            showsUserLocation: true,
+            userTrackingMode: $userTrackingMode,
+            annotationItems: [
+                placeList(coordinate: .init(latitude: latitude, longitude: longitude))
+            ],annotationContent: { item in
+                MapMarker(coordinate: item.coordinate)
+            })
+    }
+    
+    struct placeList: Identifiable{
+        let id = UUID()
+        let coordinate: CLLocationCoordinate2D
+    }
+
+
+        struct MapView_Previews: PreviewProvider {
+            static var previews: some View {
+                MapView(latitude: 41.789504, longitude: 140.751912)//シエスタ
             }
         }
     }
-    struct MapView_Previews: PreviewProvider {
-        static var previews: some View {
-            MapView(place: IdentifiablePlace(lat: 41.789656, long: 140.751924))
-        }
-    }
-    
-    
-}
+

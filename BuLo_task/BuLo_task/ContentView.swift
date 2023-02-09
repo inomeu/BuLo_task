@@ -10,7 +10,7 @@ import MapKit
 
 struct ContentView: View {
     var body: some View {
-        MapView(place: IdentifiablePlace(lat: 37.334_900, long: -122.009_020))
+        MapView(latitude: 41.789504, longitude: 140.751912)//シエスタ
     }
 }
 

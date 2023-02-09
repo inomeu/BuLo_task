@@ -10,13 +10,15 @@ import MapKit
 import SwiftUI
 
 
-struct IdentifiablePlace: Identifiable {
-    let id: UUID
-    let location: CLLocationCoordinate2D
-    init(id: UUID=UUID(), lat: Double, long: Double) {
-        self.id = id
-        self.location = CLLocationCoordinate2D(latitude: lat, longitude: long)
+struct Place: Identifiable {
+    let id = UUID()
+    let latitude: Double
+    let longitude: Double
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: latitude)
     }
-}
+    }
+let placeList = [Place(latitude: 41.789504, longitude: 140.751912)]//シエスタハコダテ
+
 
 
